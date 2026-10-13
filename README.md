@@ -21,3 +21,8 @@ not require rebuilding the site. Article folders use `artikel.txt` (title on
 the first line, optional body after it) and may contain one supported image.
 
 The former `.php` page URLs redirect to the corresponding Python route.
+
+Before going live, update the legal defaults in `LEGAL_DEFAULTS` at the top of
+`app.py` with the actual association name, contact details, and hosting
+provider. The generated pages use those values for the imprint and privacy
+notice.

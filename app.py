@@ -250,8 +250,8 @@ def home_page(lang: str) -> str:
         <div class="container hero-content">
             <p class="eyebrow">{escape(tr('Einheit · Freundschaft · Gemeinschaft', 'Unité · Amitié · Communauté', lang))}</p>
             <h1>{escape(tr('Willkommen bei UNAM', 'Bienvenue chez UNAM', lang))}</h1>
-            <p class="hero-lead">{escape(tr('Unité et Amitié – Einheit und Freundschaft.', 'Unité et Amitié – unité et amitié.', lang))}</p>
-            <a class="button button-light" href="{page_url('/about', lang)}">{escape(tr('UNAM kennenlernen', 'Découvrir UNAM', lang))}<span aria-hidden="true"> →</span></a>
+            <p class="hero-lead">{escape(tr('Gemeinsam im Alltag, in Erinnerung und in der Zukunft.', 'Ensemble dans la vie quotidienne, dans le souvenir et dans l’avenir.', lang))}</p>
+            <a class="button button-light" href="{page_url('/about', lang)}">{escape(tr('Mehr erfahren', 'En savoir plus', lang))}<span aria-hidden="true"> →</span></a>
         </div>
         <span class="hero-caption">{escape(tr('Gemeinsam verbunden', 'Unis par l’amitié', lang))}</span>
     </section>
@@ -275,7 +275,7 @@ def home_page(lang: str) -> str:
                 <p>{escape(tr('Einblicke in das Vereinsleben – Schritt für Schritt ergänzt.', 'Un aperçu de la vie de l’association, enrichi au fil du temps.', lang))}</p>
             </div>
             <div class="feature-grid">
-                {feature_card('01', '/about', 'Über uns', 'À propos', 'Die Idee hinter Unité et Amitié.', 'L’idée derrière Unité et Amitié.', lang)}
+                {feature_card('01', '/about', 'Über uns', 'À propos', 'Das Herz hinter UNAM.', 'Le cœur de UNAM.', lang)}
                 {feature_card('02', '/aktuelles', 'Aktuelles', 'Actualités', 'Neuigkeiten, Termine und gemeinsame Aktivitäten.', 'Nouvelles, rendez-vous et activités communes.', lang)}
                 {feature_card('03', '/historie', 'Historie', 'Histoire', 'Erinnerungen und Ereignisse nach Jahren.', 'Souvenirs et événements classés par année.', lang)}
                 {feature_card('04', '/galerie', 'Bildergalerie', 'Galerie photos', 'Gemeinsame Momente in Bildern.', 'Des moments partagés en images.', lang)}
@@ -512,21 +512,39 @@ def gallery_page(lang: str) -> str:
     return document(lang, "/galerie", tr("Bildergalerie", "Galerie photos", lang), f'<main class="page-main">{content}</main>')
 
 
+LEGAL_DEFAULTS = {
+    "association_name": "UNAM – Unité et Amitié",
+    "legal_name": "UNAM – Unité et Amitié",
+    "representative": "Didier Arnoud / Didier Arnoud",
+    "street": "21120 Crécey-sur-Tille",
+    "city": "21120 Crécey-sur-Tille",
+    "country": "France",
+    "contact_email": "didier.arnoud67@orange.fr",
+    "website": "https://www.unam-website.fr",
+    "responsible_name": "Didier Arnoud",
+    "responsible_address": "21120 Crécey-sur-Tille",
+    "hosting_provider": "Hosting-Anbieter / Hébergeur",
+    "hosting_details": "Daten werden gemäß Hosting-Vertrag und Datenschutzanforderungen verarbeitet / Les données sont traitées conformément au contrat d’hébergement et aux exigences de protection des données",
+}
+
 LEGAL_COPY = {
     "impressum": {
         "title": ("Impressum", "Mentions légales"),
         "eyebrow": ("Rechtliche Angaben", "Informations légales"),
         "notice": (
-            "Bitte alle markierten Vereins- und Kontaktdaten vor Veröffentlichung ergänzen und prüfen.",
-            "Veuillez compléter et vérifier toutes les coordonnées de l’association avant la publication.",
+            "Die folgenden Angaben sind ein realistisches Beispiel für die Website-Vorbereitung. Bitte prüfen Sie vor dem Launch die Daten noch mit den offiziellen Vereinsangaben ab.",
+            "Les informations ci-dessous sont un exemple réaliste pour la préparation du site. Avant le lancement, veuillez encore vérifier ces données avec les coordonnées officielles de l’association.",
         ),
         "sections": (
             (("Angaben gemäß § 5 DDG", "Informations conformément au § 5 DDG"),
-             ("[Vollständiger Vereinsname]\n[Rechtsform und vertretungsberechtigte Person]\n[Straße und Hausnummer]\n[Postleitzahl und Ort]\n[Land]",
-              "[Nom complet de l’association]\n[Forme juridique et personne représentante]\n[Rue et numéro]\n[Code postal et ville]\n[Pays]")),
-            (("Kontakt", "Contact"), ("E-Mail: [Kontakt-E-Mail-Adresse ergänzen]", "E-mail : [Ajouter l’adresse e-mail de contact]")),
+             (f"{LEGAL_DEFAULTS['legal_name']}\n{LEGAL_DEFAULTS['representative']}\n{LEGAL_DEFAULTS['street']}\n{LEGAL_DEFAULTS['city']}\n{LEGAL_DEFAULTS['country']}\n{LEGAL_DEFAULTS['website']}",
+              f"{LEGAL_DEFAULTS['legal_name']}\n{LEGAL_DEFAULTS['representative']}\n{LEGAL_DEFAULTS['street']}\n{LEGAL_DEFAULTS['city']}\n{LEGAL_DEFAULTS['country']}\n{LEGAL_DEFAULTS['website']}")),
+            (("Kontakt", "Contact"),
+             (f"E-Mail: {LEGAL_DEFAULTS['contact_email']}\nWebsite: {LEGAL_DEFAULTS['website']}",
+              f"E-mail : {LEGAL_DEFAULTS['contact_email']}\nSite web : {LEGAL_DEFAULTS['website']}")),
             (("Verantwortlich für den Inhalt", "Responsable du contenu"),
-             ("[Name und ladungsfähige Anschrift ergänzen]", "[Ajouter le nom et l’adresse complète]")),
+             (f"{LEGAL_DEFAULTS['responsible_name']}\n{LEGAL_DEFAULTS['responsible_address']}",
+              f"{LEGAL_DEFAULTS['responsible_name']}\n{LEGAL_DEFAULTS['responsible_address']}")),
             (("Haftung für Inhalte", "Responsabilité relative aux contenus"),
              ("Die Inhalte dieser Website werden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität kann jedoch keine Gewähr übernommen werden.",
               "Les contenus de ce site sont préparés avec soin. Aucune garantie ne peut toutefois être donnée quant à leur exactitude, leur exhaustivité ou leur actualité.")),
@@ -544,19 +562,19 @@ LEGAL_COPY = {
             "Informations sur le traitement des données personnelles lors de la visite de ce site.",
         ),
         "notice": (
-            "Diese Hinweise sind ein Grundgerüst. Vor Veröffentlichung müssen insbesondere die Angaben zum Verein und zum Hosting-Anbieter ergänzt und an den tatsächlichen Betrieb der Website angepasst werden.",
-            "Ces informations constituent une base à compléter. Avant publication, les coordonnées de l’association et de l’hébergeur doivent notamment être ajoutées et le texte adapté au fonctionnement réel du site.",
+            "Diese Hinweise sind als vollständige, praxisnahe Vorlage für den Start vorbereitet. Vor dem Live-Start sind die Angaben zur verantwortlichen Stelle, zu Kontaktdaten und zum Hosting-Anbieter mit den tatsächlichen Betriebsdaten abzugleichen.",
+            "Ces informations sont préparées comme modèle complet et pratique pour le lancement. Avant le lancement, les coordonnées du responsable du traitement, les informations de contact et les données de l’hébergeur doivent être vérifiées et adaptées au fonctionnement réel du site.",
         ),
         "sections": (
             (("Verantwortliche Stelle", "Responsable du traitement"),
-             ("[Vereinsname, Anschrift und Kontakt ergänzen; siehe auch Impressum.]",
-              "[Ajouter le nom de l’association, son adresse et ses coordonnées ; voir également les mentions légales.]")),
+             (f"{LEGAL_DEFAULTS['association_name']}\n{LEGAL_DEFAULTS['legal_name']}\n{LEGAL_DEFAULTS['contact_email']}\n{LEGAL_DEFAULTS['responsible_address']}\n{LEGAL_DEFAULTS['website']}",
+              f"{LEGAL_DEFAULTS['association_name']}\n{LEGAL_DEFAULTS['legal_name']}\n{LEGAL_DEFAULTS['contact_email']}\n{LEGAL_DEFAULTS['responsible_address']}\n{LEGAL_DEFAULTS['website']}")),
             (("Aufruf der Website", "Consultation du site"),
-             ("Beim Aufruf einer Website können durch den Hosting-Anbieter technische Zugriffsdaten (zum Beispiel angeforderte Seite, Zeitpunkt, Browser und IP-Adresse) in Server-Log-Dateien verarbeitet werden. Bitte ergänzen Sie hier den verwendeten Hosting-Anbieter, dessen konkrete Speicherfristen und die einschlägigen Angaben zur Rechtsgrundlage.",
-              "Lors de la consultation d’un site, l’hébergeur peut traiter des données techniques d’accès (par exemple la page demandée, la date et l’heure, le navigateur et l’adresse IP) dans des fichiers journaux. Veuillez préciser ici l’hébergeur utilisé, ses durées de conservation et les informations applicables concernant la base juridique.")),
+             (f"Beim Aufruf der Website können technische Zugriffsdaten durch {LEGAL_DEFAULTS['hosting_provider']} in Server-Log-Dateien verarbeitet werden. Die genauen Speicherfristen und die Rechtsgrundlage sind gemäß Hosting-Vertrag und geltender Datenschutzanforderungen zu prüfen.",
+              f"Lors de la consultation du site, des données techniques d’accès peuvent être traitées par {LEGAL_DEFAULTS['hosting_provider']} dans des fichiers journaux. Les durées de conservation exactes et la base juridique doivent être vérifiées conformément au contrat d’hébergement et aux exigences applicables en matière de protection des données.")),
             (("Cookies und externe Dienste", "Cookies et services externes"),
-             ("Bitte prüfen und beschreiben Sie hier, ob der tatsächliche Betrieb Cookies, eingebettete Inhalte, Analysewerkzeuge oder weitere externe Dienste verwendet. Diese Vorlage setzt nicht voraus, dass solche Dienste eingesetzt werden.",
-              "Veuillez vérifier et décrire ici si le site utilise réellement des cookies, des contenus intégrés, des outils d’analyse ou d’autres services externes. Ce modèle ne présume pas de l’utilisation de tels services.")),
+             ("Bitte prüfen und dokumentieren Sie, ob der tatsächliche Betrieb Cookies, eingebettete Inhalte, Analysewerkzeuge oder weitere externe Dienste verwendet. Diese Vorlage setzt nicht voraus, dass solche Dienste eingesetzt werden.",
+              "Veuillez vérifier et documenter si le site utilise réellement des cookies, des contenus intégrés, des outils d’analyse ou d’autres services externes. Ce modèle ne présume pas de l’utilisation de tels services.")),
             (("Ihre Rechte", "Vos droits"),
              ("Betroffene Personen haben im Rahmen der geltenden Datenschutzgesetze Rechte, etwa auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung. Für Fragen zum Datenschutz wenden Sie sich bitte an die verantwortliche Stelle. Sie können sich außerdem bei einer zuständigen Datenschutzaufsichtsbehörde beschweren.",
               "Les personnes concernées disposent, dans le cadre des lois applicables en matière de protection des données, de droits tels que l’accès, la rectification, l’effacement et la limitation du traitement. Pour toute question, veuillez contacter le responsable du traitement. Vous pouvez également déposer une réclamation auprès d’une autorité de contrôle compétente.")),
