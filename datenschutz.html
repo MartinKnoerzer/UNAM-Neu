@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Datenschutzhinweise zur UNAM-Website und Hinweise zur Datenverarbeitung.">
+    <title>Datenschutz — UNAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Einheit und Freundschaft</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Menü öffnen" data-close-label="Menü schließen">
+                <span class="sr-only">Menü öffnen</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="aktuelles.html">Aktuelles</a></li>
+                    <li><a href="historie.html">Historie</a></li>
+                    <li><a href="galerie.html">Bildergalerie</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Sprache wählen">
+                <a href="datenschutz.html" lang="de" aria-current="true">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="datenschutz-fr.html" lang="fr">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero container">
+            <p class="eyebrow">Ihre Daten</p>
+            <h1>Datenschutzhinweise</h1>
+            <p class="page-lead">Informationen zur Verarbeitung personenbezogener Daten beim Besuch dieser Website.</p>
+        </section>
+
+        <section class="container legal-content">
+            <p class="legal-notice">Diese Hinweise sind ein Grundgerüst. Vor Veröffentlichung müssen insbesondere die Angaben zum Verein und zum Hosting-Anbieter ergänzt und an den tatsächlichen Betrieb der Website angepasst werden.</p>
+
+            <h2>Verantwortliche Stelle</h2>
+            <p>[Vereinsname, Anschrift und Kontakt ergänzen; siehe auch Impressum.]</p>
+
+            <h2>Aufruf der Website</h2>
+            <p>Beim Aufruf einer Website können durch den Hosting-Anbieter technische Zugriffsdaten (zum Beispiel angeforderte Seite, Zeitpunkt, Browser und IP-Adresse) in Server-Log-Dateien verarbeitet werden. Bitte ergänzen Sie hier den verwendeten Hosting-Anbieter, dessen konkrete Speicherfristen und die einschlägigen Angaben zur Rechtsgrundlage.</p>
+
+            <h2>Cookies und externe Dienste</h2>
+            <p>Bitte prüfen und beschreiben Sie hier, ob der tatsächliche Betrieb Cookies, eingebettete Inhalte, Analysewerkzeuge oder weitere externe Dienste verwendet. Diese Vorlage setzt nicht voraus, dass solche Dienste eingesetzt werden.</p>
+
+            <h2>Ihre Rechte</h2>
+            <p>Betroffene Personen haben im Rahmen der geltenden Datenschutzgesetze Rechte, etwa auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung. Für Fragen zum Datenschutz wenden Sie sich bitte an die verantwortliche Stelle. Sie können sich außerdem bei einer zuständigen Datenschutzaufsichtsbehörde beschweren.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index.html">UNAM</a>
+                <p>Unité et Amitié<br>Einheit und Freundschaft</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Rechtliches</h2>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>

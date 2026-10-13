@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bildergalerie von UNAM mit Momenten aus gemeinsamen Tagen und Veranstaltungen.">
+    <title>Bildergalerie — UNAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Einheit und Freundschaft</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Menü öffnen" data-close-label="Menü schließen">
+                <span class="sr-only">Menü öffnen</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="aktuelles.html">Aktuelles</a></li>
+                    <li><a href="historie.html">Historie</a></li>
+                    <li><a href="galerie.html" aria-current="page">Bildergalerie</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Sprache wählen">
+                <a href="galerie.html" lang="de" aria-current="true">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="galerie-fr.html" lang="fr">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero container">
+            <p class="eyebrow">Gemeinsame Momente</p>
+            <h1>Bildergalerie</h1>
+            <p class="page-lead">Ein Blick auf gemeinsame Tage, Begegnungen und Erinnerungen aus dem Vereinsleben.</p>
+        </section>
+
+        <section class="container gallery-section">
+            <div class="gallery-heading">
+                <h2>Jahresüberblicke</h2>
+                <p>Fotografien fassen die Atmosphäre von gemeinsamen Abenden, Festen und Ausflügen in kurzen Momenten ein.</p>
+            </div>
+
+            <div class="archive-year">
+                <h2>2026</h2>
+                <div class="photo-grid">
+                    <figure class="photo-card"><img src="bilder/bildergalerie/2026/Ostern/IMG_1748.jpg" alt="Ostern 2026"><figcaption>Ostern</figcaption></figure>
+                    <figure class="photo-card"><img src="bilder/bildergalerie/2026/Pfingsten/Crecey_20230528_080102__DxO.jpg" alt="Pfingsten 2026"><figcaption>Pfingsten</figcaption></figure>
+                </div>
+            </div>
+
+            <div class="archive-year">
+                <h2>2025</h2>
+                <div class="photo-grid">
+                    <figure class="photo-card"><img src="bilder/bildergalerie/2025/Ostern/Crecey_20220603_111321.jpg" alt="Ostern 2025"><figcaption>Ostern</figcaption></figure>
+                    <figure class="photo-card"><img src="bilder/bildergalerie/2025/Pfingsten/Crecey_20220604_141920.jpg" alt="Pfingsten 2025"><figcaption>Pfingsten</figcaption></figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index.html">UNAM</a>
+                <p>Unité et Amitié<br>Einheit und Freundschaft</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Rechtliches</h2>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>

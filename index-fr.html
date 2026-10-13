@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UNAM – Unité et Amitié : unité et amitié. Informations sur l’association, ses actualités, son histoire et ses photos.">
+    <title>UNAM — Unité et Amitié</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index-fr.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Unité et amitié</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Ouvrir le menu" data-close-label="Fermer le menu">
+                <span class="sr-only">Ouvrir le menu</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Navigation principale">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index-fr.html" aria-current="page">Accueil</a></li>
+                    <li><a href="about-fr.html">À propos</a></li>
+                    <li><a href="aktuelles-fr.html">Actualités</a></li>
+                    <li><a href="historie-fr.html">Histoire</a></li>
+                    <li><a href="galerie-fr.html">Galerie photos</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Choisir la langue">
+                <a href="index.html" lang="de">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="index-fr.html" lang="fr" aria-current="true">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image" role="img" aria-label="Vue de la maison UNAM"></div>
+            <div class="hero-shade"></div>
+            <div class="container hero-content">
+                <p class="eyebrow">Unité · Amitié · Communauté</p>
+                <h1>Bienvenue chez UNAM</h1>
+                <p class="hero-lead">Unité et Amitié – unité et amitié.</p>
+                <a class="button button-light" href="about-fr.html">Découvrir UNAM<span aria-hidden="true"> →</span></a>
+            </div>
+            <span class="hero-caption">Unis par l’amitié</span>
+        </section>
+
+        <section class="intro-section container">
+            <div class="section-heading">
+                <p class="eyebrow">Bienvenue</p>
+                <h2>Un lieu de rencontre et de convivialité</h2>
+            </div>
+            <div class="intro-copy">
+                <p>UNAM signifie Unité et Amitié. Ce site présente l’association et rassemble ses actualités, son histoire et ses photos.</p>
+                <p>Le contenu évolue au rythme de la vie de l’association – en allemand et en français.</p>
+            </div>
+        </section>
+
+        <section class="explore-section">
+            <div class="container">
+                <div class="section-heading section-heading-row">
+                    <div>
+                        <p class="eyebrow">Découvrir UNAM</p>
+                        <h2>Ce qui nous rassemble</h2>
+                    </div>
+                    <p>Un aperçu de la vie de l’association, enrichi au fil du temps.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <a class="feature-card" href="about-fr.html">
+                        <span class="card-number">01</span>
+                        <h3>À propos</h3>
+                        <p>L’idée derrière Unité et Amitié.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="feature-card" href="aktuelles-fr.html">
+                        <span class="card-number">02</span>
+                        <h3>Actualités</h3>
+                        <p>Nouvelles, rendez-vous et activités communes.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="feature-card" href="historie-fr.html">
+                        <span class="card-number">03</span>
+                        <h3>Histoire</h3>
+                        <p>Souvenirs et événements classés par année.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="feature-card" href="galerie-fr.html">
+                        <span class="card-number">04</span>
+                        <h3>Galerie photos</h3>
+                        <p>Des moments partagés en images.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index-fr.html">UNAM</a>
+                <p>Unité et Amitié<br>Unité et amitié</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Informations légales</h2>
+                <a href="impressum-fr.html">Mentions légales</a>
+                <a href="datenschutz-fr.html">Confidentialité</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>

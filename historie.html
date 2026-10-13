@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Die Geschichte von UNAM – Erinnerungen, Ereignisse und gemeinsame Momente nach Jahren sortiert.">
+    <title>Historie — UNAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Einheit und Freundschaft</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Menü öffnen" data-close-label="Menü schließen">
+                <span class="sr-only">Menü öffnen</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="aktuelles.html">Aktuelles</a></li>
+                    <li><a href="historie.html" aria-current="page">Historie</a></li>
+                    <li><a href="galerie.html">Bildergalerie</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Sprache wählen">
+                <a href="historie.html" lang="de" aria-current="true">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="historie-fr.html" lang="fr">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero container">
+            <p class="eyebrow">Erinnerungen bewahren</p>
+            <h1>Historie</h1>
+            <p class="page-lead">Jahr für Jahr – Ereignisse, Begegnungen und gemeinsame Erinnerungen.</p>
+        </section>
+
+        <section class="container history-content">
+            <div>
+                <p class="history-intro">Die Geschichte von UNAM ist keine bloße Aufzählung von Daten, sondern ein lebendiges Bild von Gemeinschaft, Begegnung und Entwicklung. Jahr für Jahr tragen die Menschen zu diesem Bild bei.</p>
+            </div>
+            <div class="history-topics">
+                <h2>Schwerpunkte</h2>
+                <ul>
+                    <li>Gemeinsame Feste und Abenteuer</li>
+                    <li>Begegnungs- und Lernmomente</li>
+                    <li>Erinnerungen an besondere Jahre und Tage</li>
+                    <li>Festhalten von Fotografien und Geschichten</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container news-articles">
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2026 · 02</p>
+                    <h2>Historischer Rückblick 2026</h2>
+                    <p>Ein neues Lebensjahr mit vielen gemeinsamen Momenten, neuen Ideen und alten Erinnerungen, die an Bedeutung gewonnen haben. So entsteht die Geschichte einer Gemeinschaft Schritt für Schritt.</p>
+                </div>
+                <img src="bilder/historie/2026/02/Crecey-20140606-215904.jpg" alt="Historisches Bild aus 2026">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2026 · 01</p>
+                    <h2>Überschrift 2026 01</h2>
+                    <p>Das ist der Artikel für 01, das heißt, er kommt zum Schluss. Die Inhalte zeigen, wie eine gemeinsame Erinnerung immer wieder neu interpretiert und weitergetragen wird.</p>
+                </div>
+                <img src="bilder/historie/2026/01/Crecey-20140605-213726.jpg" alt="Historisches Bild aus 2026">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2025 · 02</p>
+                    <h2>Erinnerungen an ein besonderes Jahr</h2>
+                    <p>Jahre verbinden sich über einzelne Bilder und Geschichten. Was wir teilen, prägt die Gemeinschaft und macht sie zu einem Ort der Zugehörigkeit.</p>
+                </div>
+                <img src="bilder/historie/2025/02/Crecey-20150524-203322.jpg" alt="Historisches Bild aus 2025">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2024 · 01</p>
+                    <h2>Ein gemeinsamer Weg</h2>
+                    <p>Die Geschichte von UNAM ist geprägt von spontanen Begegnungen und bewussten Entscheidungen, die das Vereinsleben über Jahre hinweg stabil gemacht haben.</p>
+                </div>
+                <img src="bilder/historie/2024/01/Crecey-20150524-200333.jpg" alt="Historisches Bild aus 2024">
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index.html">UNAM</a>
+                <p>Unité et Amitié<br>Einheit und Freundschaft</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Rechtliches</h2>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>

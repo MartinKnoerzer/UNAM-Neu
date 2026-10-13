@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentions légales et informations juridiques du site UNAM.">
+    <title>Mentions légales — UNAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index-fr.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Unité et amitié</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Ouvrir le menu" data-close-label="Fermer le menu">
+                <span class="sr-only">Ouvrir le menu</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Navigation principale">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index-fr.html">Accueil</a></li>
+                    <li><a href="about-fr.html">À propos</a></li>
+                    <li><a href="aktuelles-fr.html">Actualités</a></li>
+                    <li><a href="historie-fr.html">Histoire</a></li>
+                    <li><a href="galerie-fr.html">Galerie photos</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Choisir la langue">
+                <a href="impressum.html" lang="de">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="impressum-fr.html" lang="fr" aria-current="true">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero container">
+            <p class="eyebrow">Informations légales</p>
+            <h1>Mentions légales</h1>
+        </section>
+
+        <section class="container legal-content">
+            <p class="legal-notice">Veuillez compléter et vérifier toutes les coordonnées de l’association avant la publication.</p>
+
+            <h2>Informations conformément au § 5 DDG</h2>
+            <p>[Nom complet de l’association]<br>[Forme juridique et personne représentante]<br>[Rue et numéro]<br>[Code postal et ville]<br>[Pays]</p>
+
+            <h2>Contact</h2>
+            <p>E-mail : [Ajouter l’adresse e-mail de contact]</p>
+
+            <h2>Responsable du contenu</h2>
+            <p>[Ajouter le nom et l’adresse complète]</p>
+
+            <h2>Responsabilité relative aux contenus</h2>
+            <p>Les contenus de ce site sont préparés avec soin. Aucune garantie ne peut toutefois être donnée quant à leur exactitude, leur exhaustivité ou leur actualité.</p>
+
+            <h2>Droit d’auteur</h2>
+            <p>Les contenus et œuvres de ce site sont soumis au droit d’auteur applicable. Toute utilisation en dehors des limites prévues par la loi nécessite l’accord préalable des titulaires des droits.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index-fr.html">UNAM</a>
+                <p>Unité et Amitié<br>Unité et amitié</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Informations légales</h2>
+                <a href="impressum-fr.html">Mentions légales</a>
+                <a href="datenschutz-fr.html">Confidentialité</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>

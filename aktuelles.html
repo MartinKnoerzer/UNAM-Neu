@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aktuelles aus dem Vereinsleben von UNAM.">
+    <title>Aktuelles — UNAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Einheit und Freundschaft</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Menü öffnen" data-close-label="Menü schließen">
+                <span class="sr-only">Menü öffnen</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="aktuelles.html" aria-current="page">Aktuelles</a></li>
+                    <li><a href="historie.html">Historie</a></li>
+                    <li><a href="galerie.html">Bildergalerie</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Sprache wählen">
+                <a href="aktuelles.html" lang="de" aria-current="true">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="aktuelles-fr.html" lang="fr">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero container">
+            <p class="eyebrow">Aus dem Vereinsleben</p>
+            <h1>Aktuelles</h1>
+            <p class="page-lead">Neuigkeiten, Termine und Einblicke in gemeinsame Aktivitäten.</p>
+        </section>
+
+        <section class="container news-articles">
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2026 · 02</p>
+                    <h2>Das war 2026 Pfingsten</h2>
+                    <p>Ein gemeinsamer Höhepunkt mit Musik, Begegnung und vielen Momenten, die wir gemeinsam erlebt haben. Die Erinnerung an diese Tage bleibt im Herzen der Gemeinschaft verankert.</p>
+                </div>
+                <img src="bilder/aktuelles/2026/02/Beze_20160514-152849.jpg" alt="Pfingsten 2026 in der Gemeinschaft">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2026 · 01</p>
+                    <h2>Überschrift 2026 01</h2>
+                    <p>Das ist der Artikel für 01, das heißt, er kommt zum Schluss. Die Vorbereitung und Planung zeigen, wie viel Energie in den gemeinsamen Austausch und die nächsten Treffen investiert wird.</p>
+                </div>
+                <img src="bilder/aktuelles/2026/01/Crecey_20240329_121418__DxO.jpg" alt="Aktuelles Bild 2026">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2025 · 02</p>
+                    <h2>Gemeinsame Erinnerung und Ausblick</h2>
+                    <p>Die Rückschau auf vergangene Momente hilft, neue Ideen zu formen und die Zusammenarbeit im Verein weiter zu stärken. Wichtig ist dabei die Vielfalt der Perspektiven und die Freude am Miteinander.</p>
+                </div>
+                <img src="bilder/aktuelles/2025/02/Beze_20160513-154445.jpg" alt="Bild aus dem Vereinsleben 2025">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2025 · 01</p>
+                    <h2>Ein Moment, der verbindet</h2>
+                    <p>Aktivitäten, Ausflüge und gemeinsame Besuche sind Kernstücke des Vereinslebens. Sie schaffen Alltagserfahrungen, die das Gefühl der Zugehörigkeit sichtbar werden lassen.</p>
+                </div>
+                <img src="bilder/aktuelles/2025/01/Beze_20160526-131839.jpg" alt="Gemeinsames Treffen im Jahr 2025">
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index.html">UNAM</a>
+                <p>Unité et Amitié<br>Einheit und Freundschaft</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Rechtliches</h2>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>

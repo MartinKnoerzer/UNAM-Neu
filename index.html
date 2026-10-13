@@ -26,16 +26,16 @@
             <nav class="site-nav" aria-label="Hauptnavigation">
                 <ul class="menu" id="main-menu">
                     <li><a href="index.html" aria-current="page">Startseite</a></li>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#aktuelles">Aktuelles</a></li>
-                    <li><a href="#historie">Historie</a></li>
-                    <li><a href="#galerie">Bildergalerie</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="aktuelles.html">Aktuelles</a></li>
+                    <li><a href="historie.html">Historie</a></li>
+                    <li><a href="galerie.html">Bildergalerie</a></li>
                 </ul>
             </nav>
             <div class="language-switch" aria-label="Sprache wählen">
                 <a href="index.html" lang="de" aria-current="true">DE</a>
                 <span aria-hidden="true">/</span>
-                <a href="index.html" lang="fr">FR</a>
+                <a href="index-fr.html" lang="fr">FR</a>
             </div>
         </div>
     </header>
@@ -48,12 +48,12 @@
                 <p class="eyebrow">Einheit · Freundschaft · Gemeinschaft</p>
                 <h1>Willkommen bei UNAM</h1>
                 <p class="hero-lead">Unité et Amitié – Einheit und Freundschaft.</p>
-                <a class="button button-light" href="#about">UNAM kennenlernen<span aria-hidden="true"> →</span></a>
+                <a class="button button-light" href="about.html">UNAM kennenlernen<span aria-hidden="true"> →</span></a>
             </div>
             <span class="hero-caption">Gemeinsam verbunden</span>
         </section>
 
-        <section class="intro-section container" id="about">
+        <section class="intro-section container">
             <div class="section-heading">
                 <p class="eyebrow">Schön, dass Sie da sind</p>
                 <h2>Ein Ort für Begegnung und Zusammenhalt</h2>
@@ -75,25 +75,25 @@
                 </div>
 
                 <div class="feature-grid">
-                    <a class="feature-card" href="#about">
+                    <a class="feature-card" href="about.html">
                         <span class="card-number">01</span>
                         <h3>Über uns</h3>
                         <p>Die Idee hinter Unité et Amitié.</p>
                         <span class="card-arrow" aria-hidden="true">↗</span>
                     </a>
-                    <a class="feature-card" href="#aktuelles">
+                    <a class="feature-card" href="aktuelles.html">
                         <span class="card-number">02</span>
                         <h3>Aktuelles</h3>
                         <p>Neuigkeiten, Termine und gemeinsame Aktivitäten.</p>
                         <span class="card-arrow" aria-hidden="true">↗</span>
                     </a>
-                    <a class="feature-card" href="#historie">
+                    <a class="feature-card" href="historie.html">
                         <span class="card-number">03</span>
                         <h3>Historie</h3>
                         <p>Erinnerungen und Ereignisse nach Jahren.</p>
                         <span class="card-arrow" aria-hidden="true">↗</span>
                     </a>
-                    <a class="feature-card" href="#galerie">
+                    <a class="feature-card" href="galerie.html">
                         <span class="card-number">04</span>
                         <h3>Bildergalerie</h3>
                         <p>Gemeinsame Momente in Bildern.</p>
@@ -112,11 +112,28 @@
             </div>
             <div class="footer-section footer-legal">
                 <h2>Rechtliches</h2>
-                <a href="#">Impressum</a>
-                <a href="#">Datenschutz</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
             </div>
         </div>
         <div class="footer-bottom"><p>© 2026 UNAM</p></div>
     </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
 </body>
 </html>

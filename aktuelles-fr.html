@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actualités de la vie associative d’UNAM.">
+    <title>Actualités — UNAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a class="brand" href="index-fr.html" aria-label="UNAM — Unité et Amitié">
+                <span class="brand-mark" aria-hidden="true">U</span>
+                <span class="brand-copy">
+                    <strong>UNAM</strong>
+                    <span>Unité et Amitié</span>
+                    <span>Unité et amitié</span>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-open-label="Ouvrir le menu" data-close-label="Fermer le menu">
+                <span class="sr-only">Ouvrir le menu</span>
+                <span aria-hidden="true" class="menu-icon"></span>
+            </button>
+            <nav class="site-nav" aria-label="Navigation principale">
+                <ul class="menu" id="main-menu">
+                    <li><a href="index-fr.html">Accueil</a></li>
+                    <li><a href="about-fr.html">À propos</a></li>
+                    <li><a href="aktuelles-fr.html" aria-current="page">Actualités</a></li>
+                    <li><a href="historie-fr.html">Histoire</a></li>
+                    <li><a href="galerie-fr.html">Galerie photos</a></li>
+                </ul>
+            </nav>
+            <div class="language-switch" aria-label="Choisir la langue">
+                <a href="aktuelles.html" lang="de">DE</a>
+                <span aria-hidden="true">/</span>
+                <a href="aktuelles-fr.html" lang="fr" aria-current="true">FR</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero container">
+            <p class="eyebrow">La vie de l’association</p>
+            <h1>Actualités</h1>
+            <p class="page-lead">Nouvelles, rendez-vous et aperçu des activités communes.</p>
+        </section>
+
+        <section class="container news-articles">
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2026 · 02</p>
+                    <h2>Ce fut la Pentecôte 2026</h2>
+                    <p>Un moment fort en commun avec de la musique, des rencontres et de nombreux instants vécus ensemble. Le souvenir de ces journées reste profondément ancré dans la mémoire de la communauté.</p>
+                </div>
+                <img src="bilder/aktuelles/2026/02/Beze_20160514-152849.jpg" alt="Pentecôte 2026 au sein de la communauté">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2026 · 01</p>
+                    <h2>Titre 2026 01</h2>
+                    <p>Ceci est l’article n° 01, ce qui signifie qu’il arrive à son terme. La préparation et la planification montrent l’énergie investie dans le dialogue et les prochains rendez-vous.</p>
+                </div>
+                <img src="bilder/aktuelles/2026/01/Crecey_20240329_121418__DxO.jpg" alt="Image actuelle 2026">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2025 · 02</p>
+                    <h2>Mémoire commune et perspectives</h2>
+                    <p>Le retour sur des moments passés aide à formuler de nouvelles idées et à renforcer la collaboration au sein de l’association. L’important est la diversité des regards et la joie de vivre ensemble.</p>
+                </div>
+                <img src="bilder/aktuelles/2025/02/Beze_20160513-154445.jpg" alt="Image de la vie associative 2025">
+            </article>
+            <article class="news-article">
+                <div class="news-article-copy">
+                    <p class="eyebrow">2025 · 01</p>
+                    <h2>Un moment qui unit</h2>
+                    <p>Les activités, les sorties et les rencontres communes sont au cœur de la vie de l’association. Elles créent des expériences du quotidien qui rendent le sentiment d’appartenance visible.</p>
+                </div>
+                <img src="bilder/aktuelles/2025/01/Beze_20160526-131839.jpg" alt="Rencontre commune en 2025">
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <a class="footer-brand" href="index-fr.html">UNAM</a>
+                <p>Unité et Amitié<br>Unité et amitié</p>
+            </div>
+            <div class="footer-section footer-legal">
+                <h2>Informations légales</h2>
+                <a href="impressum-fr.html">Mentions légales</a>
+                <a href="datenschutz-fr.html">Confidentialité</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 UNAM</p></div>
+    </footer>
+
+    <script>
+        (function () {
+            var button = document.querySelector('.menu-toggle');
+            var menu = document.getElementById('main-menu');
+            if (!button || !menu) return;
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('is-open', !isOpen);
+                button.closest('.header-container').querySelector('.site-nav').classList.toggle('is-open', !isOpen);
+                button.querySelector('.sr-only').textContent = isOpen
+                    ? button.getAttribute('data-open-label')
+                    : button.getAttribute('data-close-label');
+            });
+        }());
+    </script>
+</body>
+</html>
