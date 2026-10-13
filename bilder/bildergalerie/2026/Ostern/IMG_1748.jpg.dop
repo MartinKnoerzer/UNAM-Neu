@@ -1,0 +1,575 @@
+Sidecar = {
+Date = "2026-10-13T18:54:49.2457554Z",
+Software = "DxO PhotoLab 10.1.1",
+Source = {
+Items = {
+{
+Albums = "",
+CreationDate = "2026-10-13T18:54:27.4428637Z",
+GPSAltitude = 316.00598907873876,
+GPSLatitude = 47.561325,
+GPSLongitude = 5.1335555555555556,
+IPTC = {
+}
+,
+Keywords = {
+}
+,
+ModificationDate = "2026-10-13T18:54:49.2427358Z",
+Name = "IMG_1748.jpg",
+Orientation = 1,
+OutputItems = {
+{
+CreationDate = "2026-10-13T18:54:48.8304220Z",
+Name = "IMG_1748_DxO.jpg",
+OutputFormat = {
+}
+,
+Uuid = "99BD98D2-90BF-4A58-99C7-9B4A4BE8ED41",
+}
+,
+}
+,
+ProcessingStatus = 3,
+Rating = 0,
+Settings = {
+AppliedPresetDisplayName = "6 - Keine Korrektur",
+AppliedPresetUniqueName = "6 - No correction",
+Base = {
+AnalogFilmActive = false,
+AnalogFilmInvertImage = false,
+AnalogFilmToneCurveMasterPoints = {
+0,
+0,
+1,
+1,
+}
+,
+AnalogFilmToneCurveRedPoints = {
+0,
+0,
+1,
+1,
+}
+,
+AnalogFilmToneCurveGreenPoints = {
+0,
+0,
+1,
+1,
+}
+,
+AnalogFilmToneCurveBluePoints = {
+0,
+0,
+1,
+1,
+}
+,
+ChannelMixerActive = false,
+ChannelMixerRed = 0,
+ChannelMixerYellow = 0,
+ChannelMixerGreen = 0,
+ChannelMixerCyan = 0,
+ChannelMixerBlue = 0,
+ChannelMixerMagenta = 0,
+ChromaticAberrationActive = false,
+ChromaticAberrationIntensity = 100,
+ChromaticAberrationIntensityAuto = true,
+ChromaticAberrationPurpleActive = false,
+ChromaticAberrationSize = 4,
+ChromaticAberrationSizeAuto = false,
+ChromaticAberrationLateralActive = false,
+HazeRemovalActive = false,
+DehazingValue = 50,
+ColorGradingActive = false,
+ColorGradingBalance = 0,
+ColorGradingParams_Master = {
+Hue = 0,
+Lum = 0,
+Sat = 0,
+}
+,
+ColorGradingParams_Highlights = {
+Hue = 0,
+Lum = 0,
+Sat = 0,
+}
+,
+ColorGradingParams_Midtones = {
+Hue = 0,
+Lum = 0,
+Sat = 0,
+}
+,
+ColorGradingParams_Shadows = {
+Hue = 0,
+Lum = 0,
+Sat = 0,
+}
+,
+ColorPipeline = "WideGamut",
+ColorRenderingActive = false,
+ColorRenderingIntensity = 100,
+ColorRenderingIntent = 0,
+ColorIntentAutoActive = true,
+ColorRenderingType = "Original",
+ColorRenderingICCProfile = "",
+ColorRenderingDCPProfile = "",
+ColorRenderingDCPMode = "Adobe",
+ProfileGainMapIntensity = 100,
+ContrastControlGroupActive = false,
+ColorModeContrast = 0,
+LightingV2LocalContrastAmount = 0,
+MicroContrastAuto = true,
+ContrastEnhancementActive = false,
+ContrastEnhancementGlobalIntensity = 0,
+ContrastEnhancementHighlightIntensity = 0,
+ContrastEnhancementMidlightIntensity = 0,
+ContrastEnhancementLowlightIntensity = 0,
+VignettedBlurActive = false,
+VignettedBlurCenterPoint = {
+0.5,
+0.5,
+}
+,
+VignettedBlurBlendFactor = 100,
+VignettedBlurRadius = 0,
+VignettedBlurVignetteSize = 100,
+VignettedBlurRoundness = 50,
+VignettedBlurTransition = 50,
+VignettedBlurMode = "Vignetting",
+ArtisticVignettingActive = false,
+ArtisticVignettingCornerAttenuation = 0,
+ArtisticVignettingMidFieldAttenuation = 50,
+ArtisticVignettingRoundness = 50,
+ArtisticVignettingTransition = 0,
+ArtisticVignettingCenterPoint = {
+0.5,
+0.5,
+}
+,
+CropActive = false,
+CropAuto = false,
+CropRatio = 0,
+CropRect = {
+0,
+0,
+1,
+1,
+}
+,
+DistortionActive = false,
+DistortionType = "Auto",
+DistortionTypeAuto = false,
+DistortionIntensity = 1,
+DistortionKeepRatio = false,
+DistortionAnamorphosisKeepEntireImage = false,
+EdgeTexturingActive = false,
+EdgeTextureID = "fuitelum1",
+EdgeTexturingOpacity = 0.5,
+EdgeTexturingSeed = 0,
+EdgeTexturingPosition = "Random",
+EdgeTexturingApplyToning = false,
+ExposureActive = false,
+ExposureAutoMode = "Manual",
+ExposureBias = 0,
+HLRActive = true,
+ColorFilterActive = false,
+ColorModeFilter = "CoolTone",
+ColorModeFilterIntensity = 100,
+DistortionFocus = 128,
+FramingActive = false,
+FrameID = "1",
+FramingSeed = 0,
+FramingScaleFactor = 0.25,
+FramingOutside = false,
+FramingApplyToning = false,
+GrainActive = false,
+GrainType = "Original",
+GrainFilmFormat = "24x36",
+GrainIntensity = 100,
+GrainSize = 1,
+GrainSizeAuto = false,
+HistogramActive = false,
+KeystoningHorizonActive = false,
+KeystoningHorizon = 0,
+KeystoningHorizonAuto = true,
+HSLActive = false,
+HSLMaster = {
+Hue = 0,
+Saturation = 0,
+}
+,
+HSLHueSlices = {
+{
+FadeInStart = 325.07,
+FadeInEnd = 343.759,
+FadeOutStart = 15.623,
+FadeOutEnd = 31.137,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Red",
+}
+,
+{
+FadeInStart = 15.623,
+FadeInEnd = 31.137,
+FadeOutStart = 41.144,
+FadeOutEnd = 50.114,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Orange",
+}
+,
+{
+FadeInStart = 41.144,
+FadeInEnd = 50.114,
+FadeOutStart = 54.533,
+FadeOutEnd = 63.109,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Yellow",
+}
+,
+{
+FadeInStart = 54.533,
+FadeInEnd = 63.109,
+FadeOutStart = 145.702,
+FadeOutEnd = 171.415,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Green",
+}
+,
+{
+FadeInStart = 145.702,
+FadeInEnd = 171.415,
+FadeOutStart = 201.099,
+FadeOutEnd = 216.152,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Cyan",
+}
+,
+{
+FadeInStart = 201.099,
+FadeInEnd = 216.152,
+FadeOutStart = 246.546,
+FadeOutEnd = 264.986,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Blue",
+}
+,
+{
+FadeInStart = 246.546,
+FadeInEnd = 264.986,
+FadeOutStart = 275.526,
+FadeOutEnd = 294.798,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Purple",
+}
+,
+{
+FadeInStart = 275.526,
+FadeInEnd = 294.798,
+FadeOutStart = 325.07,
+FadeOutEnd = 343.759,
+Hue = 0,
+Saturation = 0,
+Luminance = 0,
+Uniformity = 0,
+Label = "Magenta",
+}
+,
+}
+,
+HSLHueSlicesColorPipeline = "WideGamut",
+VibrancyIntensity = 0,
+BlurActive = false,
+BlurActiveAuto = false,
+BlurIntensity = 100,
+BlurDetails = 50,
+BlurSmoothTransitions = 50,
+LightingActive = false,
+LightingMode = "V3Slight",
+LightingV3Intensity = 25,
+LightingV3RegionPriorityMode = "None",
+LightingPriorityRegions = {
+}
+,
+LocalParametersActive = false,
+LocalParameters = {
+}
+,
+LocalParametersVersion = 2,
+ColorLookupActive = false,
+ColorLookupPath = "",
+ColorLookupIntensity = 100,
+ColorLookupColorSpace = "sRGB",
+NoiseRemoveMoireActive = false,
+NoiseRemoveMoireAuto = true,
+NoiseRemoveMoireIntensity = 0,
+NoiseActive = false,
+NoiseChrominance = 0,
+NoiseChrominanceAuto = true,
+NoiseLuminance = 40,
+NoiseLuminanceAuto = true,
+NoiseLuminanceContrast = 100,
+NoiseLuminanceContrastAuto = true,
+NoiseCrossTalkIntensity = 30,
+NoiseCrossTalkAuto = true,
+NoiseDeadPixelAuto = true,
+NoiseDeadPixelIntensity = 0,
+NoiseRemovalMethod = "standard",
+NoiseDetailsPreservation = 0,
+KeystoningActive = false,
+KeystoningBlendingIntensity = 100,
+KeystoningUpDown = 0,
+KeystoningLeftRight = 0,
+KeystoningHVRatio = 0,
+KeystoningMode = "Auto",
+KeystoningPoints = {
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+}
+,
+KeystoningKeepCenter = true,
+KeystoningKeepOriginalSize = false,
+KeystoningAutoMode = "Full",
+RedEyeCorrectionActive = false,
+RedEyeLocateMode = "DetectedEyes",
+RedEyeRegions = {
+}
+,
+RedEyeEllipses = {
+}
+,
+InpaintingActive = false,
+InpaintingMask = {
+}
+,
+InpaintingDustMasks = {
+}
+,
+SelectiveTonalControlActive = false,
+LightingV3Highlights = 0,
+LightingV3MidTones = 0,
+LightingV3Shadows = 0,
+LightingV3BlackPoint = 0,
+LightingV3WhitePoint = 0,
+SoftProofingActive = false,
+OutputICCProfile = "sRGB",
+OutputICCProfilePath = "",
+OutputRenderingIntent = "Perceptual",
+SoftProofingPaperAndInk = false,
+OutputSaturatedColorsProtection = 50,
+SuperSharpnessActive = false,
+SuperSharpnessBxuValue = 8,
+TexturingActive = false,
+TextureID = "grain4b",
+TexturingOpacity = 0.5,
+TexturingSeed = 0,
+TexturingApplyToning = false,
+TiltShiftActive = false,
+TiltShiftGradient1 = {
+BlurRadius = 40,
+NoCorrectionPoint = {
+0.5,
+0.7,
+}
+,
+FullCorrectionPoint = {
+0.5,
+0.8,
+}
+,
+}
+,
+TiltShiftGradient2 = {
+BlurRadius = 40,
+NoCorrectionPoint = {
+0.5,
+0.3,
+}
+,
+FullCorrectionPoint = {
+0.5,
+0.2,
+}
+,
+}
+,
+TiltShiftBlurShapeID = "Circular_medium",
+OPTiltShiftShouldSynchronizeIntensities = true,
+OPTiltShiftShouldSynchronizeLines = true,
+ToneCurveActive = false,
+ToneCurveMasterPoints = {
+0,
+0,
+1,
+1,
+}
+,
+ToneCurveMasterGamma = 1,
+ToneCurveLuminancePoints = {
+0,
+0,
+1,
+1,
+}
+,
+ToneCurveLuminanceGamma = 1,
+ToneCurveRedPoints = {
+0,
+0,
+1,
+1,
+}
+,
+ToneCurveRedGamma = 1,
+ToneCurveGreenPoints = {
+0,
+0,
+1,
+1,
+}
+,
+ToneCurveGreenGamma = 1,
+ToneCurveBluePoints = {
+0,
+0,
+1,
+1,
+}
+,
+ToneCurveBlueGamma = 1,
+ToningActive = false,
+ToningMode = "single",
+HighlighsLowlightsSeparation = 0.5,
+ColorModeStyle = "Sepia",
+ColorModeStyleIntensity = 100,
+LowlightToningStyle = "Gold",
+LowlightToningCustomHue = 0,
+LowlightToningCustomSaturation = 50,
+LowlightToningIntensity = 100,
+LowlightToningDisableDesaturation = true,
+HighlightToningStyle = "Sepia",
+HighlightToningCustomHue = 0,
+HighlightToningCustomSaturation = 50,
+HighlightToningIntensity = 100,
+HighlightToningDisableDesaturation = true,
+UnsharpMaskActive = false,
+UnsharpMaskActiveAuto = false,
+UnsharpMaskIntensity = 100,
+UnsharpMaskRadius = 0.5,
+UnsharpMaskThreshold = 4,
+UnsharpMaskIntensityOffset = 0,
+VignettingActive = false,
+VignettingType = "Auto",
+VignettingTypeAuto = false,
+VignettingIntensity = 100,
+VignettingIntensityAuto = true,
+VignettingClipping = 50,
+VignettingClippingAuto = true,
+VignettingMidFieldIntensity = 0,
+AnamorphosisActive = false,
+AnamorphosisType = "Spherical",
+AnamorphosisRadial = 150,
+AnamorphosisHorizontal = 100,
+AnamorphosisVertical = 0,
+GridWarpingActive = false,
+GridWarpingGrids = {
+PointsPerRow = 0,
+InputGrid = {
+}
+,
+PointsPerColumn = 0,
+OutputGrid = {
+}
+,
+}
+,
+WatermarkActive = false,
+WatermarkImagePath = "",
+WatermarkImageOpacity = 1,
+WatermarkImagePosition = "BottomRight",
+WatermarkImageRotation = 0,
+WatermarkImageScale = 0.15,
+WatermarkImageBottomMargin = 0,
+WatermarkImageLeftMargin = 0,
+WatermarkImageRightMargin = 0,
+WatermarkImageTopMargin = 0,
+WatermarkImageBlendMode = "Normal",
+WatermarkText = "",
+WatermarkTextFont = "ArialMT",
+WatermarkTextColor = {
+1,
+1,
+1,
+}
+,
+WatermarkTextOpacity = 1,
+WatermarkTextPosition = "Bottom",
+WatermarkTextRotation = 0,
+WatermarkTextSize = 0.05,
+WatermarkTextLeftMargin = 0,
+WatermarkTextTopMargin = 0,
+WatermarkTextRightMargin = 0,
+WatermarkTextBottomMargin = 0,
+WatermarkTextBlendMode = "Normal",
+WhiteBalanceRawActive = false,
+WhiteBalanceRawPreset = "AsShot",
+WhiteBalanceRawTemperature = 5400,
+WhiteBalanceRawInputImageColor = {
+}
+,
+WhiteBalanceRawTint = 0,
+WhiteBalanceRGBActive = false,
+WhiteBalanceRGBTemperature = 5200,
+WhiteBalanceRGBColor = {
+}
+,
+}
+,
+Overrides = {
+}
+,
+Version = "21.0",
+}
+,
+ShotDate = "2024-03-29T19:49:22.7730000+01:00",
+ShouldProcess = 2,
+Uuid = "DD88F6EF-ED93-4891-BA3E-FE59594AB95D",
+}
+,
+}
+,
+Uuid = "2B81E1FC-BE53-4970-B449-E78FA6E6669A",
+}
+,
+Version = "21.0",
+}
+
